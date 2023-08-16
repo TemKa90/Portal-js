@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Portal</title>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</head>
+<body>
+<audio src="assets/music/music.mp3" loop></audio>
+    <div class="start_zone">
+        <div class="menu">
+            <section class="buttons">
+                <p class="btn btn-two start_game"><span>Start</span></p>
+                <p class="btn btn-two open_shop"><span>Shop</span></p>
+                <p class="btn btn-two open_menu"><span>Settings</span></p>
+            </section>
+        </div>
+        <div class="setting">
+            <section class="close"><span class="iconify" data-icon="carbon:close-filled"></span></section>
+            <section class="music">
+                <span class="iconify" data-icon="mdi:play"></span>
+                <input type="range" min="0" max="100" step="1" value="50">
+                <span class="iconify" data-icon="mdi:volume-low"></span>
+            </section>
+            <p class="edit_level">Редактор уровней</p>
+        </div>
+        <div class="shop">
+            <section class="close"><span class="iconify" data-icon="carbon:close-filled"></span></section>
+            <section class="items">
+                <img src="assets/image/icon/witch.png" alt="Blue_Witch" class="item" select="true">
+                <img src="assets/image/icon/witch_red.jpg" alt="Red_Witch" class="item" select="false">
+                <img src="assets/image/icon/witch_white.jpg" alt="White_Witch" class="item" select="false">
+                <img src="assets/image/icon/witch_yellow.jpg" alt="Yellow_Witch" class="item" select="false">
+                
+            </section>
+        </div>
+    </div>
+    <div class="game">
+        <div class="hud">
+            <section class="score_cube">
+                <img src="assets/image/icon/Cube1.png" alt="">
+                <p>0</p>
+            </section>
+            <!-- <section class="score_money">
+                <img src="assets/image/icon/money.png" alt="">
+                <p>0</p>
+            </section> -->
+        </div>
+        <canvas id="gameZone"></canvas>
+        <div class="blocks" id_door="">
+            <section>
+                <img src="assets/image/icon/block_1.png" alt="" id_block="1">
+            </section>
+            <section>
+                <img src="assets/image/icon/block_2.png" alt="" id_block="2">
+            </section>
+            <section>
+                <img src="assets/image/icon/Cube1.png" alt="" id_block="3" >
+            </section>
+            <section>
+                <img src="assets/image/icon/laser_1.png" alt="" id_block="4" >
+            </section>
+            <section>
+                <img src="assets/image/icon/terminal1.png" alt="" id_block="5" >
+            </section>
+            <section>
+                <img src="assets/image/icon/stand_button_1.png" alt="" id_block="6" >
+            </section>
+            <section>
+                <img src="assets/image/icon/entry_vertical.png" alt="" id_block="7" >
+            </section>
+            <section>
+                <img src="assets/image/icon/Robot.png" alt="" id_block="8" >
+            </section>
+            <section>
+                <img src="assets/image/icon/bat.jpg" alt="" id_block="9" >
+            </section>
+            <section>
+                <img src="assets/image/icon/bat_vertical.jpg" alt="" id_block="10" >
+            </section>
+            <section>
+                <img src="assets/image/icon/long_metal_spike.png" alt="" id_block="11" height="50%" width="50%" >
+            </section>
+            <section>
+                <img src="assets/image/icon/Button_1.png" alt="" id_block="12" >
+            </section>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/UI.js"></script>
+    <script src="assets/js/object.js"></script>
+    <script src="assets/js/levels.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
